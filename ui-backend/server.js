@@ -111,10 +111,10 @@ app.get("/api/download-report", (req, res) => {
 
 // ------------------- START -------------------
 
-app.listen(4000, () => {
-  console.log("🚀 UI Backend running on http://localhost:4000");
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log("🚀 UI Backend running on port", PORT);
   console.log("📄 Reading logs from:", LOG_FILE);
   console.log("📑 Report script:", REPORT_SCRIPT);
   console.log("📥 Report output:", REPORT_FILE);
 });
-
