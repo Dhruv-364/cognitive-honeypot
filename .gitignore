@@ -1,0 +1,9 @@
+venv/
+node_modules/
+__pycache__/
+data/*.jsonl
+data/charts/
+data/report.*
+.env
+.DS_Store
+build/
