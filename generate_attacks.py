@@ -1,7 +1,7 @@
 import requests
 import time
 
-BASE_URL = "http://127.0.0.1:5000"
+BASE_URL = "https://cognitive-honeypot-mxsf.onrender.com"
 
 def normal_traffic():
     print("[*] Sending normal traffic...")

@@ -288,8 +288,8 @@ function Dashboard({ role, onLogout }) {
   const fetchData = async () => {
     try {
       const [statsRes, logsRes] = await Promise.all([
-        axios.get("http://localhost:4000/api/stats"),
-        axios.get("http://localhost:4000/api/logs")
+        axios.get("https://cognitive-honeypot-1.onrender.com/api/stats"),
+        axios.get("https://cognitive-honeypot-1.onrender.com/api/logs")
       ]);
       setStats(statsRes.data);
       setLogs(logsRes.data);
@@ -364,8 +364,8 @@ function Dashboard({ role, onLogout }) {
   const generatePDF = async () => {
     try {
       showToast("Generating PDF report...", "info");
-      await axios.get("http://localhost:4000/api/generate-report");
-      const response = await axios.get("http://localhost:4000/api/download-report", {
+      await axios.get("https://cognitive-honeypot-1.onrender.com/api/generate-report");
+      const response = await axios.get("https://cognitive-honeypot-1.onrender.com/api/download-report", {
         responseType: "blob"
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -962,4 +962,3 @@ function App() {
 }
 
 export default App;
-

@@ -2,7 +2,7 @@ import requests
 import random
 import time
 
-BASE_URL = "http://127.0.0.1:5000"
+BASE_URL = "https://cognitive-honeypot-mxsf.onrender.com"
 
 # Fake IP pool with country and coordinates
 FAKE_IPS = [
@@ -242,4 +242,3 @@ if __name__ == "__main__":
         send_attack()
         # Random delay between attacks (0.1 to 3 seconds)
         time.sleep(random.uniform(0.1, 3.0))
-
